@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX3: Greeting App</title>
+      <style>
+        body {
+            background-color: #C0C0C0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color:  #280137;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+        h1 {
+            color: whitesmoke;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        button {
+            background-color: #FBFFFF;
+            color: #B026FF;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        .footer {
+            font-size: 12px;
+            margin-top: 15px;
+            color: navy;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>GREETING APP</h1><hr>
+
+        <form>
+            <label for="">Enter Name: </label>
+            <input type="text" name="first-name" id="fname">
+
+            <h6 id="greeting">Hello I love you</h6><br>
+
+            <button type="button" onclick="Irasshaimase()">Greet</button>
+            <button type="button" onclick="window.location.reload()">Refresh</button>
+        </form>
+
+    </div>
+
+    <!-- Function for Greet button -->
+    <script type="text/javascript">
+       function Irasshaimase() {
+            var nameInput = document.getElementById('fname').value;
+
+            document.getElementById('greeting').innerHTML = 'Ohayō' + nameInput + '!';
+       } 
+    </script>
+
+</body>
+</html>
